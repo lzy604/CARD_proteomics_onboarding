@@ -1,0 +1,31 @@
+name: "Proteomics Group Onboarding"
+output_dir: "../docs"
+navbar:
+  title: "Proteomics Group Onboarding"
+  left:
+    - text: "Start here"
+      href: index.html
+    - text: "Learn proteomics"
+      href: learn-proteomics.html
+    - text: "Learn R"
+      href: learn-r.html
+    - text: "Biowulf"
+      href: biowulf.html
+    - text: "Database search"
+      href: database-search.html
+    - text: "Spectronaut DirectDIA"
+      href: spectronaut-directdia.html
+    - text: "ProtPipe"
+      href: protpipe.html
+    - text: "Practice data"
+      href: example-dataset.html
+    - text: "Troubleshooting"
+      href: troubleshooting.html
+output:
+  html_document:
+    theme: null
+    css: styles.css
+    toc: true
+    toc_float: true
+    toc_depth: 2
+    code_folding: hide

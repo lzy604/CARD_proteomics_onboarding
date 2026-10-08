@@ -1,0 +1,42 @@
+---
+title: "Biowulf Basics"
+---
+
+## Access and login
+
+Request an NIH HPC account and group allocation before starting. Follow the official **[NIH HPC account instructions](https://hpc.nih.gov/docs/accounts.html)**. The account-request form is available only from the NIH network or VPN, and account approval requires your PI and the appropriate sponsoring information.
+
+<div class="callout">
+<strong>Individual accounts only.</strong> NIH HPC does not allow shared accounts or shared passwords. Keep your own account, SSH setup, and access approval current.
+</div>
+
+## File systems
+
+Use the group-approved project and scratch locations. Keep raw files, databases, scripts, intermediate files, and final results in clearly named directories. Do not run intensive analyses on a login node.
+
+## SLURM basics
+
+SLURM schedules batch jobs on compute nodes. Every job script should record the resources requested, software version, input paths, output path, and analysis command.
+
+```bash
+#!/bin/bash
+#SBATCH --job-name=proteomics-test
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=32g
+#SBATCH --time=04:00:00
+#SBATCH --output=logs/%x-%j.out
+
+module load <approved-software-module>
+<analysis-command>
+```
+
+<div class="callout">
+Replace placeholders with group-approved modules and paths. Save the SLURM job ID and output log for every analysis.
+</div>
+
+## Before submitting a full analysis
+
+1. Confirm the file paths and file names.
+2. Test a small subset of raw files.
+3. Inspect the log and output files.
+4. Scale to the full dataset only after the test finishes correctly.

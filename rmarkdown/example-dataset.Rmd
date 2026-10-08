@@ -1,0 +1,25 @@
+---
+title: "Example Dataset"
+---
+
+The group provides a protected practice dataset so new members can run the same analysis and compare their results with an expected output.
+
+| Item | What to provide |
+|---|---|
+| Raw files | Group storage path and access instructions |
+| FASTA | Approved reference database and version |
+| Metadata | Sample sheet and description of the experiment |
+| Search results | Expected DIA-NN or Spectronaut outputs |
+| ProtPipe output | Expected QC and final analysis files |
+
+## Recommended exercise
+
+1. Copy the practice files to your approved working space.
+2. Run the documented DIA-NN or Spectronaut test workflow.
+3. Compare the key output files with the expected results.
+4. Run the corresponding ProtPipe configuration.
+5. Discuss unexpected QC results with your mentor.
+
+<div class="callout">
+Do not store raw instrument files in GitHub. Store them on approved institutional or Biowulf storage, then link to the location from this page.
+</div>

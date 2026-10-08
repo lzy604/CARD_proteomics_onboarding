@@ -1,0 +1,26 @@
+---
+title: "ProtPipe"
+---
+
+ProtPipe provides a consistent downstream-analysis workflow for processed proteomics results.
+
+## Inputs
+
+- Validated search output
+- Sample metadata and comparison plan
+- Group configuration template
+
+## Workflow
+
+1. Copy the example configuration rather than starting from an empty file.
+2. Update only sample annotations, input paths, and the analysis-specific settings.
+3. Submit the group-approved script on Biowulf.
+4. Review QC, normalized quantitative tables, figures, and analysis reports.
+
+<div class="callout">
+Keep the configuration file with the output. It is the record of how the analysis was produced.
+</div>
+
+## Add to this page
+
+Include your group&apos;s ProtPipe installation location, configuration template, example command, expected outputs, and a small example analysis.

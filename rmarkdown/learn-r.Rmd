@@ -1,0 +1,47 @@
+---
+title: "Learn R for Proteomics"
+---
+
+R is useful throughout a proteomics project: importing quantitative tables, checking data quality, making figures, testing hypotheses, and creating reproducible reports. Learn the language alongside real biomedical data rather than in isolation.
+
+## Recommended learning path
+
+### 1. Start with the R basics
+
+**[NCI BTEP: Introductory R for Novices](https://bioinformatics.ccr.cancer.gov/btep/courses/introductory-r-for-novices-getting-started-with-r-1)** is the recommended starting point for learners new to R. It introduces R/RStudio, R objects, vectors, data structures, importing data, and data frames. The course is designed for beginners and includes material for working with R on Biowulf.
+
+After completing the introductory material, use **[R for Data Science](https://r4ds.hadley.nz/)** to practice data import, transformation, visualization, and reproducible workflows. Focus first on the chapters about data visualization, workflow basics, data transformation, and Quarto/R Markdown.
+
+### 2. Learn R in a biomedical context
+
+**[Bioconductor Training](https://training.bioconductor.org/)** provides hands-on courses and workshops for R-based biomedical and bioinformatics analysis. It is particularly helpful once you are comfortable with data frames and basic plotting.
+
+**[Introduction to Bioinformatics and Computational Biology](https://liulab-dfci.github.io/bioinfo-combio/)** is a broader course from Shirley Liu's group. We strongly recommend completing its labs; the companion **[2021 STAT115 playlist](https://www.youtube.com/playlist?list=PLeB-Dlq-v6taAXK6ZCGfqImrNWJzFt3p3)** provides the associated video lectures.
+
+### 3. Apply R to our proteomics workflow
+
+**[ProtPipe2 documentation](https://nih-card.github.io/ProtPipe2/)** demonstrates the downstream analysis and visualization tasks that we use in proteomics, including QC, normalization, imputation, statistical testing, heatmaps, volcano plots, and PCA.
+
+The **[ProtPipe GitHub repository](https://github.com/NIH-CARD/ProtPipe)** is useful once you are ready to understand the code and workflow structure. It includes an example pipeline that accepts DIA-NN or Spectronaut protein-abundance output and generates QC reports, analyses, and visualizations.
+
+<div class="callout">
+<strong>Suggested order:</strong> complete the BTEP R course; work through selected R for Data Science chapters; finish the Bioinformatics and Computational Biology labs; then use ProtPipe with the group's example proteomics dataset.
+</div>
+
+## Skills to practice
+
+Use a small copy of the practice dataset to learn how to:
+
+1. Read a CSV or TSV result table into R.
+2. Check sample names, missing values, and basic summary statistics.
+3. Make a PCA plot, boxplot, heatmap, and volcano plot.
+4. Join protein-level results to sample metadata.
+5. Write a short R Markdown report that records the code and figures.
+
+## Extra practice option
+
+**[Posit Cloud Primers](https://posit.cloud/learn/primers)** offers browser-based practice exercises. It is optional, but useful if you prefer guided interactive lessons before working in a local RStudio session or on Biowulf.
+
+## When to ask for help
+
+Bring the R script or R Markdown file, the exact error message, a small non-sensitive example of the input table, and the R/package versions you used.

@@ -1,0 +1,90 @@
+---
+title: "Spectronaut DirectDIA Protocol"
+---
+
+This protocol is for library-free DIA analysis in Spectronaut. DirectDIA builds a project-specific library from the DIA runs and then uses it for targeted analysis of those same runs. Confirm the approved Spectronaut version and site-specific compute procedure before beginning.
+
+## 1. Prepare inputs
+
+Before creating an analysis, confirm that you have:
+
+- DIA raw files in a Spectronaut-supported format.
+- A tabular sample sheet with unique run names, sample IDs, conditions, and biological replicates.
+- A human reference-proteome FASTA and the 381-entry Universal Contaminants FASTA supplied with this handbook, including version/date in the file names and analysis notes.
+- The approved settings schema for the experiment, if your group maintains one.
+- A project directory with separate `raw/`, `results/`, `logs/`, and `reports/` locations.
+
+<div class="callout">
+<strong>Do not start with all files.</strong> First run a representative subset and check its output. This catches file, database, and settings problems before using substantial compute time.
+</div>
+
+## 2. Create the DirectDIA analysis
+
+In Spectronaut's Analysis Perspective:
+
+1. Select **Set up a directDIA Analysis**.
+2. Give the analysis a descriptive, versioned name, for example `ProjectName_directDIA_v1`.
+3. Add the DIA run files. Confirm that every displayed run name matches the sample sheet.
+4. Add the two FASTA files described below: first the approved Human FASTA, then `Universal_Contaminants_381.fasta`. Record both full file names in the analysis notebook or README.
+5. Select the approved search and analysis settings schema. If no approved schema exists, start from the current default/factory schema and document every change.
+6. Add conditions and replicates in the experimental-design editor if differential analysis or post-analysis processing is planned.
+7. Review the setup summary carefully, then save the experiment before starting it.
+
+## Human and contaminant FASTA files
+
+For a standard human-proteome search, add these two files separately in the DirectDIA setup wizard:
+
+- **Human FASTA:** the group-approved release of the **[UniProt human reference proteome (UP000005640)](https://www.uniprot.org/help/proteome)**.
+- **Contaminants FASTA:** the handbook's **381-entry Universal Contaminants FASTA**, `resources/fasta/Universal_Contaminants_381.fasta`.
+
+In Spectronaut, click **Add FASTA** once for the Human FASTA and click **Add FASTA** again for the Universal Contaminants FASTA. Confirm that both names appear in the selected-database list before continuing.
+
+Save the UniProt release/date, source URLs, checksums, and both exact file names with the analysis. Do not download a FASTA from an unrecorded source or overwrite an earlier database file.
+
+<div class="callout">
+<strong>Confirm the database with the project lead.</strong> Some projects use canonical sequences only, whereas others include reviewed isoforms. Use one documented choice consistently across all samples being compared. The contaminants FASTA is from Frankenfield AM, Ni J, Ahmed M, and Hao L, <em>Journal of Proteome Research</em> (2022), doi: <a href="https://doi.org/10.1021/acs.jproteome.2c00145">10.1021/acs.jproteome.2c00145</a>.
+</div>
+
+## 3. Review the settings before running
+
+The group lead should confirm these settings for each experiment:
+
+| Setting area | Confirm |
+|---|---|
+| Digestion | Enzyme, missed cleavages, peptide-length limits, and protein N-terminal handling match sample preparation. |
+| Modifications | Fixed and variable modifications match the protocol; do not add exploratory modifications without documenting why. |
+| Search | Precursor/fragment mass accuracy and instrument settings are appropriate for the acquisition method. |
+| Identification confidence | Peptide/precursor/protein FDR thresholds follow the group standard. |
+| Quantification | Cross-run normalization, interference correction, and filtering are appropriate and documented. |
+| Reporting | Include the reports needed for QC, downstream ProtPipe input, and a record of settings. |
+
+## 4. Run on the approved compute environment
+
+Use the group-approved Spectronaut installation and job-submission procedure. Spectronaut licenses, executable locations, and supported operating environments vary, so do not copy a command from another project without confirming it locally.
+
+Record:
+
+- Spectronaut version and license environment.
+- Job ID, host/compute environment, start and finish times.
+- Input directory, FASTA path, settings schema, and output directory.
+- The exact command or saved experiment configuration.
+
+## 5. Check results before downstream analysis
+
+After a successful run, inspect:
+
+1. The job log for warnings and failed run files.
+2. Identification counts across runs; unusually low counts may indicate a file or settings problem.
+3. Retention-time alignment and other run-level QC summaries.
+4. Missingness, intensity distributions, and sample clustering/PCA.
+5. Experimental-design labels and the exported report column names.
+
+Only proceed to ProtPipe or other downstream analysis after the group lead agrees that the QC is acceptable.
+
+## 6. Archive the analysis
+
+Save the final settings schema, run/sample mapping, FASTA copy or checksum, logs, and report exports alongside the results. Where permitted, also save the DirectDIA search archive so the analysis can be revisited without reconstructing the setup.
+
+## Reference
+
+For software-specific details, use the current [Spectronaut user manual](https://biognosys.com/content/uploads/2025/06/Spectronaut-20-Manual.pdf). The manual describes DirectDIA as a library-free workflow that starts from DIA files and a FASTA database, then guides the user through run selection, database assignment, settings, experimental design, and final setup review.

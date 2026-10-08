@@ -1,0 +1,26 @@
+---
+title: "Learn Proteomics"
+---
+
+## Proteomics basics
+
+Mass spectrometry measures peptide signals that can be matched to protein sequences. A typical analysis moves from **raw instrument files** to **identified peptides**, then **protein groups**, quantified values, and biological interpretation.
+
+## DDA versus DIA
+
+| Approach | Basic idea | Typical use |
+|---|---|---|
+| DDA | Selects individual precursor ions for fragmentation. | Discovery experiments and spectral-library generation. |
+| DIA | Fragments all ions within sequential mass windows. | Consistent, deep quantitative proteomics. |
+
+## Concepts to know
+
+- **FASTA:** protein-sequence database used for peptide identification.
+- **Spectral library:** reference collection of observed peptide spectra.
+- **FDR:** estimated false discovery rate; a measure used to control confidence.
+- **QC:** quality-control checks that identify problems before interpretation.
+- **Protein inference:** grouping peptide evidence into protein-level results.
+
+## Software concepts
+
+**Spectronaut** supports DIA processing with a graphical workflow and report exports. **DIA-NN** is a fast command-line tool that supports library-free DIA analysis. Both require documented settings, an approved FASTA database, and quality-control review.

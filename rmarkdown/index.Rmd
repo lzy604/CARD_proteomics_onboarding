@@ -1,0 +1,51 @@
+---
+title: "Proteomics Dry-Lab Onboarding"
+subtitle: "A practical, step-by-step guide for new group members"
+---
+
+This handbook focuses on **dry-lab proteomics work**: data analysis, Biowulf, database searching, R, and reproducible reporting. It does not cover sample preparation or instrument operation.
+
+## Start here
+
+Follow the pages in this order. Each link opens the detailed instructions for that part of the workflow.
+
+1. **[Get an NIH HPC account and learn Biowulf](biowulf.html)**
+2. **[Learn R for proteomics](learn-r.html)**
+3. **[Learn core proteomics concepts](learn-proteomics.html)**
+4. **[Set up a database search](database-search.html)**
+5. Choose a specialized workflow: **[Spectronaut DirectDIA](spectronaut-directdia.html)** or **[DIA-NN](database-search.html#dia-nn)**
+6. **[Run downstream analysis with ProtPipe](protpipe.html)**
+7. **[Use the practice dataset](example-dataset.html)** and compare your outputs
+
+## Your first-week dry-lab path
+
+| Day | Goal | What to do |
+|---|---|---|
+| 1 | Get oriented | Request access, review the glossary, and learn the DIA workflow. |
+| 2 | Learn the computing environment | Log in to Biowulf, find your project directory, and submit a small practice job. |
+| 3 | Run a search | Analyze the example raw files using DIA-NN or Spectronaut. |
+| 4 | Analyze results | Inspect QC and follow the ProtPipe example. |
+
+<div class="callout">
+<strong>Start with the example dataset.</strong> It gives every new member the same files, expected outputs, and troubleshooting reference. Raw instrument files remain on approved NIH storage; this GitHub repository contains the instructions and analysis resources.
+</div>
+
+## Click a specialized section
+
+| Need help with… | Open this page |
+|---|---|
+| NIH HPC account, SSH, files, SLURM | [Biowulf basics](biowulf.html) |
+| R, R Markdown, biomedical data analysis | [Learn R for proteomics](learn-r.html) |
+| DDA, DIA, peptides, and protein groups | [Learn proteomics](learn-proteomics.html) |
+| Choosing DIA-NN or Spectronaut | [Database search](database-search.html) |
+| Library-free Spectronaut analysis | [Spectronaut DirectDIA protocol](spectronaut-directdia.html) |
+| Post-search QC and statistical analysis | [ProtPipe](protpipe.html) |
+| Practice files and expected results | [Example dataset](example-dataset.html) |
+| Errors and what to provide when asking | [Troubleshooting](troubleshooting.html) |
+
+## Before you begin
+
+- Request an NIH HPC/Biowulf account and access to the group project.
+- Obtain the group location for raw files and the approved FASTA database.
+- Ask your mentor which database-search workflow applies to your experiment.
+- Keep a plain-text record of commands, software versions, configurations, and output paths.

@@ -1,0 +1,26 @@
+---
+title: "Troubleshooting"
+---
+
+## Before asking for help
+
+Save these details:
+
+- Exact command or SLURM script
+- Job ID and complete log file
+- Software and database version
+- Input and output paths
+- Exact error message
+
+## Common checks
+
+| Problem area | Check first |
+|---|---|
+| Biowulf job fails | Resource request, job log, quota, module, and paths |
+| No input files found | File names, directory path, read permission, and sample sheet |
+| Search output looks wrong | FASTA version, parameters, FDR, and raw-file assignment |
+| Downstream analysis fails | Required columns, metadata names, configuration path, and input-output match |
+
+## Who to contact
+
+Add your group&apos;s preferred contact person, office hours, issue tracker, or shared communication channel here.

@@ -1,0 +1,50 @@
+---
+title: "Database Search"
+---
+
+All searches should use the group-approved FASTA database and documented software settings. Record database version, tool version, parameters, sample sheet, command, and output directory.
+
+## Spectronaut
+
+### Inputs
+
+- Raw files
+- Group-approved human FASTA plus `resources/fasta/Universal_Contaminants_381.fasta`, and, where applicable, a spectral library
+- Sample metadata
+
+### Checklist
+
+1. Confirm raw-file names match the sample sheet.
+2. Start from the validated group settings template.
+3. Run a small representative subset first.
+4. Review identification, quantification, and QC reports before full-scale analysis.
+
+### Group-specific command
+
+Add the approved Spectronaut module/container, script, FASTA path, and output convention here.
+
+For the step-by-step library-free workflow, follow the [Spectronaut DirectDIA protocol](spectronaut-directdia.html).
+
+## DIA-NN
+
+### Hands-on Biowulf tutorial
+
+Follow the group's **[How to Run DIA-NN on Biowulf](https://colossal-caper-1cd.notion.site/How-to-Run-DIANN-on-Biowolf-15fba19442768071ae0ff24d3a13e437)** guide for the detailed environment-specific workflow. Use it together with the group-approved FASTA, configuration, and storage paths.
+
+### Library-free workflow
+
+Use the documented human-plus-contaminants FASTA database and parameters appropriate for the instrument and digestion protocol. Review precursor and protein-level FDR settings before running.
+
+```bash
+diann --fasta <approved_database.fasta> \
+  --f <raw_file_1> --f <raw_file_2> \
+  --out <output_directory>/report.tsv \
+  <lab-approved-parameters>
+```
+
+### Before accepting results
+
+- Confirm the expected report and QC files were produced.
+- Inspect identification numbers and retention-time behavior.
+- Check that the sample names and output location are correct.
+- Keep the exact command and log with the result files.
