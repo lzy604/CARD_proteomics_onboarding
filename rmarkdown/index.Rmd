@@ -1,9 +1,19 @@
 ---
-title: "Proteomics Dry-Lab Onboarding"
+title: "CARD Proteomics Onboarding"
 subtitle: "A practical, step-by-step guide for new group members"
 ---
 
 This handbook focuses on **dry-lab proteomics work**: data analysis, Biowulf, database searching, R, and reproducible reporting. It does not cover sample preparation or instrument operation.
+
+## Maintainer and contact
+
+<div class="contact-card">
+<strong>Ziyi Li, Ph.D.</strong><br>
+Senior Biomedical Data Scientist / Senior Proteomics Data Specialist<br>
+Center for Alzheimer's Disease and Related Dementias (CARD)<br>
+National Institutes of Health (NIH)<br>
+Email: <a href="mailto:liz36@nih.gov">liz36@nih.gov</a>
+</div>
 
 ## Start here
 

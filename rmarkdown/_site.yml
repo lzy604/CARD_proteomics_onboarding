@@ -1,7 +1,7 @@
-name: "Proteomics Group Onboarding"
+name: "CARD Proteomics Onboarding"
 output_dir: "../docs"
 navbar:
-  title: "Proteomics Group Onboarding"
+  title: "CARD Proteomics Onboarding"
   left:
     - text: "Start here"
       href: index.html
@@ -25,6 +25,8 @@ output:
   html_document:
     theme: cosmo
     css: styles.css
+    includes:
+      after_body: footer.html
     toc: true
     toc_float: true
     toc_depth: 2

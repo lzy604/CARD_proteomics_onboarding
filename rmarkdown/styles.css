@@ -6,6 +6,9 @@ a { color: #23715a; }
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a { color: #fff; }
 .navbar-default .navbar-nav > li > a:hover { color: #b7db71; }
 .callout { margin: 1.4rem 0; padding: 1rem 1.25rem; border-left: 4px solid #ed704c; background: #fff0e7; }
+.contact-card { margin: 1.2rem 0 1.8rem; padding: 1.1rem 1.25rem; border-left: 4px solid #23715a; background: #f2f8f5; }
+.site-footer { margin-top: 3rem; padding: 1.25rem 0 2rem; border-top: 1px solid #d8e3de; color: #52635d; font-size: 0.9rem; }
+.site-footer p { margin: 0; }
 pre { background: #1d2b2c; color: #eef5ef; border: 0; padding: 1rem; }
 code { color: #b54428; }
 pre code { color: inherit; }

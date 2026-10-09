@@ -1,4 +1,4 @@
-# Proteomics Dry-Lab Onboarding
+# CARD Proteomics Onboarding
 
 Welcome to the Proteomics Group dry-lab onboarding handbook. This repository helps new members learn the computational side of proteomics: NIH HPC/Biowulf, database searching, R, QC, and downstream analysis.
 
