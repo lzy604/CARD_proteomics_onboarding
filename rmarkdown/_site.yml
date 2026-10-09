@@ -23,7 +23,7 @@ navbar:
       href: troubleshooting.html
 output:
   html_document:
-    theme: null
+    theme: cosmo
     css: styles.css
     toc: true
     toc_float: true
